@@ -1,29 +1,24 @@
 let garage = {
-    automobili : [{name: "Mazda", model: "CX30"}, 
-                  {name: "Mercedes", model: "A180"},
-                  {name: "Mazda", model: "CX5"},
-                  {name: "Audi", model: "A6"},
-                  {name: "Porsche", model: "Cayman"}],
+    automobili : [{marca: 'Audi', model: 'A6'},
+                  {marca: 'Audi', model: 'TT'},
+                  {marca: 'Mazda', model: 'CX30'},
+                  {marca: 'Ferrari', model: '812'},
+                  {marca: 'Porsche', model: 'Cayman'},],
 
-    // showAllCars : function (){
-    //     this.automobili.forEach((auto) =>
-    //     { console.log (auto.name)})
-    // },
 
-    showThisBrand : function () {
+showCars : function(){
+    this.automobili.forEach((auto) =>
+    { console.log (auto.marca)})
+},
 
-        let userInput = prompt ("Che marca ti interessa?")
-        this.automobili.forEach((auto) => {
-        if ( userInput == auto.name){
-            console.log (auto.model)
-        }
-
-        })
-
-    }
+showModel : function () {
+    let inputUser = prompt ("Quale marca è tua macchina?")
+this.automobili.forEach((auto) =>
+    {if (auto.marca == inputUser)[
+        console.log (auto.model)
+    ]})
+}
 
 }
 
-// garage.showAllCars();
-garage.showThisBrand();
-
+garage.showModel();
